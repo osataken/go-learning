@@ -2,7 +2,6 @@ package learning
 
 type Outer struct {
 	Inner
-	level string
 }
 
 type Inner struct {

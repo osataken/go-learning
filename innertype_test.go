@@ -10,7 +10,7 @@ func TestInnerTypeFunctionShouldBeCall(t *testing.T) {
 	}
 	expected := "inner method"
 
-	result := outer.doSomething()
+	result := outer.Inner.doSomething()
 
 	if result != expected {
 		t.Errorf("Expected %V but was %V", expected, result)
@@ -20,7 +20,6 @@ func TestInnerTypeFunctionShouldBeCall(t *testing.T) {
 func TestOuterTypeFunctionShouldBeCall(t *testing.T) {
 	outer := Outer{
 		Inner : Inner {},
-		level : "super",
 	}
 	expected := "outer method"
 
